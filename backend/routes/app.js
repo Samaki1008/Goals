@@ -3,12 +3,12 @@ const route = express.Router()
 const Controller = require('../controller/app_controller')
 
 
-route.get('/', Controller.get)
+route.get('/', Controller.GetGoals)
 
-route.post('/', Controller.post)
+route.post('/', Controller.SetGoals)
 
-route.put('/', Controller.put)
+route.put('/:id', Controller.UpdateGoals)
 
-route.delete('/', Controller.deleteit)
+route.delete('/:id', Controller.DeleteGoals)
 
 module.exports = route
